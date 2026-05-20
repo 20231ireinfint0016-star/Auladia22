@@ -65,6 +65,11 @@ public class Program {
             e.printStackTrace();
 
         }finally {
+            DB.closeStatement();
+
+        try {
+            ps = conn.prepareStatement("UPDATE seller"+"SET BaseSalary = BaseSalary + ?" + "WHERE" + "DepartmentID" )
+        }
 
             //consultar dados
 
